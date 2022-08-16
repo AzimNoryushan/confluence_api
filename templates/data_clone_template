@@ -1,0 +1,28 @@
+<div id="main-content" class="wiki-content">
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 100.0%;" resolved="">
+            <thead>
+                <tr>
+                    <th style="text-align: left;" class="confluenceTh"><p>Name</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Type</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Method</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Endpoint</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Query String</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Description</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Remarks</p></th>
+                </tr>
+                {% for column in columns %}
+                <tr>
+                    <td colspan="1" class="confluenceTd">{{column['Name']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['SourceProperties']['WebService']['Type']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['SourceProperties']['WebService']['Method']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['SourceProperties']['WebService']['Path']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['SourceProperties']['WebService']['Parameters']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['Description']}}</td>
+                    <td colspan="1" class="confluenceTd"></td>
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+</div>

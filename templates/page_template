@@ -1,0 +1,88 @@
+<div id="main-content" class="wiki-content">                  
+    <p><u><strong>Overview</strong></u></p>
+    <p><span style="color: rgb(23,43,77);">The {{dashboard_info['Dashboard Name']}} gives you key summary insights into your clients and your performance. Users will have the ability to narrow down the search using the filters below:</span></p>
+    <ul>
+        {% for filter in dashboard_info['Filters'] %}
+            <li><span style="color: rgb(23,43,77);">{{filter}}</span></li>
+        {% endfor %}
+    </ul>
+    <p><u><strong><span style="color: rgb(23,43,77);">Insights</span></strong></u></p>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 100.0%;" resolved="">
+            <thead>
+                <tr>
+                    <th style="text-align: left;" class="confluenceTh"><p>Insight Name</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Insight Overview</p></th>
+                    <th style="text-align: left;" class="confluenceTh"><p>Data View</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Drilldown</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Insight Type</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Group By Columns</p></th>
+                    <th style="text-align: left;" class="confluenceTh"><p>Calculated Column</p></th>
+                    <th style="text-align: left;" class="confluenceTh"><p>Filter By Column</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Change Requests</p></th>
+                </tr>
+                {% for insight in dashboard_info['Insights'] %}
+                <tr>
+                    <td colspan="1" class="confluenceTd">{{insight['Name']}}</td>
+                    <td colspan="1" class="confluenceTd"><span style="color: rgb(23,43,77);">A {{insight['Template']}} that displays {{insight['Name']}}</span></td>
+                    <td colspan="1" class="confluenceTd">{{insight['Views']}}</td>
+                    <td colspan="1" class="confluenceTd">
+                    {% for drilldown in insight['Drilldown'] %}
+                        <p>{{drilldown}}</p>
+                    {% endfor %}
+                    </td>
+                    <td colspan="1" class="confluenceTd"><p>{{insight['Template']}}</p></td>
+                    <td colspan="1" class="confluenceTd">
+                    {% for groupBy in insight['Group By'] %}
+                        <p>{{groupBy}}</p>
+                    {% endfor %}
+                    </td>
+                    <td colspan="1" class="confluenceTd">
+                    {% for calculateBy in insight['Calculate By'] %}
+                        <p>{{calculateBy}}</p>
+                    {% endfor %}
+                    </td>
+                    <td colspan="1" class="confluenceTd">
+                    {% for filterBy in insight['Filter By'] %}
+                        <p>{{filterBy}}</p>
+                    {% endfor %}
+                    </td>
+                    <td colspan="1" class="confluenceTd"><div class="table-wrap">
+                            <table class="wrapped confluenceTable tablesorter tablesorter-default" role="grid" resolved="">
+                                <thead>
+                                    <tr role="row" class="tablesorter-headerRow">
+                                        <th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Version: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                            <div class="tablesorter-header-inner">Version</div>
+                                        </th>
+                                        <th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Requested By: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                            <div class="tablesorter-header-inner">Requested By</div>
+                                        </th>
+                                        <th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Detail of Change: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                            <div class="tablesorter-header-inner">Detail of Change</div>
+                                        </th>
+                                        <th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Approved?: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                            <div class="tablesorter-header-inner">Approved?</div>
+                                        </th>
+                                        <th class="confluenceTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Completed Date: No sort applied, activate to apply an ascending sort" style="user-select: none;">
+                                            <div class="tablesorter-header-inner">Completed Date</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody aria-live="polite" aria-relevant="all">
+                                    <tr role="row">
+                                        <td class="confluenceTd">1</td>
+                                        <td class="confluenceTd"></td>
+                                        <td class="confluenceTd"></td>
+                                        <td class="confluenceTd"></td>
+                                        <td class="confluenceTd"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div id="main-content" class="wiki-content">
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 100.0%;" resolved="">
+            <thead>
+                <tr>
+                    <th style="text-align: left;" class="confluenceTh"><p>Column Name</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Type</p></th>
+                    <th style="text-align: left;" colspan="1" class="confluenceTh"><p>Description</p></th>
+                </tr>
+                {% for column in columns %}
+                <tr>
+                    <td colspan="1" class="confluenceTd">{{column['name']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['type']}}</td>
+                    <td colspan="1" class="confluenceTd">{{column['description']}}</td>
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+</div>
