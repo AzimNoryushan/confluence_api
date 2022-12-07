@@ -1,0 +1,153 @@
+{
+    "AlertRecipientRecId": 8500,
+    "AlertRecipientType": "user",
+    "BadDataAction": "skipcell",
+    "BatchSize": null,
+    "CacheAttemptCount": 0,
+    "CacheDateTime": null,
+    "CacheMode": "disabled",
+    "CachePriority": "normal",
+    "ColumnsCount": 10,
+    "CreatedBy": "Simple Editor",
+    "CreatedDate": "2021-12-02T15:12:57.3273023Z",
+    "CurrentSize": 200000,
+    "CurrentVersion": 66,
+    "DataConnectionCode": "webservice",
+    "DataConnectionIsBroker": false,
+    "DataConnectionName": "API-Internal",
+    "DataConnectionRecId": 1477,
+    "DataMergeJoinsCount": 0,
+    "Description": "0f389e4b-752c-46ca-b632-ab6d03622d2c",
+    "FileExtension": null,
+    "FileName": null,
+    "FilePath": null,
+    "FileType": "json",
+    "FolderSecurityCascaded": true,
+    "HasAccessToConnectionProperties": true,
+    "HasUpdateKeys": true,
+    "HistoryCountLimit": 5,
+    "IsAlertEnabled": false,
+    "IsAlertFailureEnabled": false,
+    "IsAlertSuccessEnabled": false,
+    "IsDataLoader": false,
+    "IsHistoryEnabled": false,
+    "IsProcessed": true,
+    "LastDataUpdate": "2022-05-18T09:25:27.7401366Z",
+    "LastProcessStatus": "ready",
+    "Name": "ASNItemList-Data",
+    "OwnerRecId": 8500,
+    "PreventEditSourceProperties": false,
+    "RowCount": 3978,
+    "SchemaUpdatedDate": "2021-12-02T15:12:58.6975033Z",
+    "SourceDataUpdate": null,
+    "SourceName": null,
+    "SourceProperties": {
+      "BadDataAction": "skipcell",
+      "FileType": "json",
+      "Schema": {
+        "Columns": [
+          {
+            "DisplayName": "ASNId",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "ASNId"
+          },
+          {
+            "DisplayName": "ProductId",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "ProductId"
+          },
+          {
+            "DisplayName": "QuantityExpected",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "QuantityExpected"
+          },
+          {
+            "DisplayName": "QuantityReceieved",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "QuantityReceieved"
+          },
+          {
+            "DisplayName": "QuantityBooked",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "QuantityBooked"
+          },
+          {
+            "DisplayName": "OnOrder",
+            "Index": 0,
+            "InternalType": "int64",
+            "SourceName": "OnOrder"
+          },
+          {
+            "DisplayName": "Complete",
+            "Index": 0,
+            "InternalType": "bit",
+            "SourceName": "Complete"
+          },
+          {
+            "DisplayName": "ID",
+            "Index": 0,
+            "InternalType": "int64",
+            "IsUniqueKey": true,
+            "SourceName": "ID"
+          },
+          {
+            "DisplayName": "LastUpdated",
+            "Index": 0,
+            "InternalType": "datetime",
+            "SourceName": "LastUpdated"
+          },
+          {
+            "DisplayName": "LastUpdatedByUser",
+            "Index": 0,
+            "InternalType": "textsimple(250)",
+            "SourceName": "LastUpdatedByUser"
+          }
+        ]
+      },
+      "ViewType": null,
+      "WebService": {
+        "CopyParentFields": false,
+        "Root": [],
+        "StringifySubstructures": true,
+        "CallsPerHour": 1000,
+        "CallsPerMinute": 100,
+        "CallsPerSecond": 5,
+        "Headers": [
+          {
+            "Key": "Accept-Encoding",
+            "Value": "gzip, deflate"
+          }
+        ],
+        "Method": "GET",
+        "NextPageField": "next_page",
+        "NextPageHeader": "NextPageToken",
+        "NextPageTokenIn": "url",
+        "NextPageTokenInWithName": "token",
+        "PageParameter1IncrementBy": 1,
+        "PageParameter1InitialValue": 1,
+        "PageParameter1Name": "pageNo",
+        "PageParameter2IncrementBy": 0,
+        "PageParameter2InitialValue": 0,
+        "PageParameter2Name": "pagesize",
+        "PageParameterPlacement": "url",
+        "PagingByReferenceSource": "urlinresponse",
+        "PagingMode": "incremental",
+        "Parameters": "lastDataRefresh={{If(If(DataInfo('ASNItemList-Data', 'RowCount')>0,DataRefreshMode(),'ForceFullReload')='updateappend',FormatDateTime(IfEmptyOrNull(DataInfo('ASNItemList-Data', 'LastDataRefresh'),DateAdd(now(),-100,'Year')),'yyyy-MM-ddTHH:mm:ss.sssZ'),FormatDateTime(DateAdd(now(),-100,'Year'),'yyyy-MM-ddTHH:mm:ss.sssZ'))}}\n",
+        "Path": "api/v1/Stock/GetASNItemList",
+        "StopPagingOnHttpStatusCode": 400,
+        "Type": "REST",
+        "UsePageParameter2": false
+      }
+    },
+    "SourceRecId": null,
+    "SubTables": [],
+    "Tags": null,
+    "ViewType": null,
+    "WorkerTaskStatus": null,
+    "WorkerTaskSubType": null
+  }

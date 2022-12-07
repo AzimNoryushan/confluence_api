@@ -1,0 +1,129 @@
+{
+    "Dashboard Name": "Proclaim Personal Injury", 
+    "Insights": 
+    [
+        {
+            "Name": "My Live Matters", 
+            "Views" : "My Proclaim Matters Analytics", 
+            "Drilldown" : [],
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : ["ISLIVE = 1"],
+            "Calculate By" : ["COUNT - Case No"]
+        }, 
+        {
+            "Name": "My Opened Matters", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [], 
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : [],
+            "Calculate By" : ["COUNT - Case Type"]
+        }, 
+        {
+            "Name": "My Closed Matters", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [],
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : ["IsClosed = 1"],
+            "Calculate By" : ["COUNT - Case Type"]
+        },
+        {
+            "Name": "My Live Matters By Case Type", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Live Matters By File Opened Date"],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Case Type"],
+            "Filter By" : ["ISLIVE = 1"],
+            "Calculate By" : ["COUNT - Case No"]
+        },
+        {
+            "Name": "My Matters Opened By Case Type", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Opened Matters By File Opened Date"],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Case Type"],
+            "Filter By" : [],
+            "Calculate By" : ["COUNT - Case No"]
+        },
+        {
+            "Name": "My Matters Closed By Case Type", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Closed Matters By File Opened Date"],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Case Type"],
+            "Filter By" : ["IsClosed = 1"],
+            "Calculate By" : ["COUNT - Case No"]
+        },
+        {
+            "Name": "All My Live Matters", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Pie)",
+            "Group By" : ["Case Type"],
+            "Filter By" : ["ISLIVE = 1"],
+            "Calculate By" : ["COUNT - Case Type"]
+        },
+        {
+            "Name": "My Live Matters By File Opened Date", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Live Matters Table Data"],
+            "Template" : "Chart (Dynamic Column)",
+            "Group By" : ["File Opened", "Case Type"],
+            "Filter By" : ["ISLIVE = 1"],
+            "Calculate By" : ["COUNT - Case Type"]
+        },
+        {
+            "Name": "My Live Matters Table Data", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [],
+            "Template" : "Table",
+            "Group By" : ["Case No", "Case Type", "Client Name", "Client Name", "Fee Earner", "File Opened"],
+            "Filter By" : ["ISLIVE = 1"],
+            "Calculate By" : []
+        },
+        {
+            "Name": "My Opened Matters By File Opened Date", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Opened Matters Table Data"],
+            "Template" : "Chart (Dynamic Column)",
+            "Group By" : ["File Opened", "Case Type"],
+            "Filter By" : [],
+            "Calculate By" : ["COUNT - Case Type"]
+        },
+        {
+            "Name": "My Opened Matters Table Data", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [],
+            "Template" : "Table",
+            "Group By" : ["Case No", "Case Type", "Client Name", "Fee Earner", "File Opened"],
+            "Filter By" : [],
+            "Calculate By" : []
+        },
+        {
+            "Name": "My Closed Matters By File Opened Date", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : ["My Closed Matters Table Data"],
+            "Template" : "Chart (Dynamic Column)",
+            "Group By" : ["File Opened", "Case Type"],
+            "Filter By" : ["IsClosed = 1"],
+            "Calculate By" : ["COUNT - Case Type"]
+        },
+        {
+            "Name": "My Closed Matters Table Data", 
+            "Views" : "My Proclaim Matters Analytics",
+            "Drilldown" : [],
+            "Template" : "Table",
+            "Group By" : ["Case No", "Case Type", "Client Name", "Fee Earner", "File Opened", "File Closed"],
+            "Filter By" : ["IsClosed = 1"],
+            "Calculate By" : []
+        }
+    ], 
+    "Filters": 
+        ["File Opened Date", 
+        "Matter Fee Earner",
+        "File Closed Date",
+        "Case Type"
+        ]
+}
