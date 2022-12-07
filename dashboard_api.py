@@ -4,7 +4,6 @@ import json
 import os
 
 app = flask.Flask(__name__)
-data_folder_path = os.getcwd() # Get current path
 
 @app.route('/')
 def index():
@@ -12,8 +11,10 @@ def index():
 
 @app.route('/<dashboard_name>')
 def get_json_data(dashboard_name):
-    if os.path.exists(data_folder_path + '\data\\' + dashboard_name + '.json'):
-        json_file = open(data_folder_path + '\data\\' + dashboard_name + '.json')
+    data_folder_path = os.getcwd() + '\data\\' + dashboard_name + '.json'
+
+    if os.path.exists(data_folder_path):
+        json_file = open(data_folder_path)
         dashboard_info = json.load(json_file)
         return dashboard_info
     else:
