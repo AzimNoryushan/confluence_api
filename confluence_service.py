@@ -32,7 +32,7 @@ def create_dashboard(space = None, dashboard_name = None):
     return status
 
 # TODO: Clean up messy logic :(
-# /update/DSDEA/Access+EzBuild/Access+EzBuild+-+Analytics/Dashboard+Summary
+# /update/DSDEA/Access+EzBuild/Access+EzBuild+-+Analytics/dashboard_summary
 @app.route('/update/<space>/<project>/<parent>/<dashboard_name>')
 def update_dashboard(space = None, project = None, parent = None, dashboard_name = None):
     # Update an existing dashboard
