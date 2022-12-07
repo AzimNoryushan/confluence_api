@@ -1,0 +1,165 @@
+{
+    "Dashboard Name": "My Proclaim Accounts", 
+    "Insights": 
+    [
+        {
+            "Name": "Fees Billed", 
+            "Views" : "My Proclaim Accounts Analytics", 
+            "Drilldown" : [],
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Total Fees Billed"]
+        }, 
+        {
+            "Name": "Fees Billed by Department", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [], 
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Department"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        }, 
+        {
+            "Name": "Fees Billed by Fee Earner", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Fee Earner"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        },
+        {
+            "Name": "Fees Billed by Period", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Period"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        },
+        {
+            "Name": "Total Debtors Amount", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Outstanding Ledger"]
+        },
+        {
+            "Name": "Fees Billed Info", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Table",
+            "Group By" : ["Matter Code", "Description", "Narrative", "Fee Earner", "Type", "Sub Type"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        },
+        {
+            "Name": "Cost Received", 
+            "Views" : "My Proclaim Accounts Bill Detail Analytics",
+            "Drilldown" : [],
+            "Template" : "Metric (Number)",
+            "Group By" : [],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Amount"]
+        },
+        {
+            "Name": "Cost Received by Fee Earner", 
+            "Views" : "My Proclaim Accounts Bill Detail Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Fee Earner"],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Amount"]
+        },
+        {
+            "Name": "Cost Received by Department", 
+            "Views" : "My Proclaim Accounts Bill Detail Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Department"],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Amount"]
+        },
+        {
+            "Name": "Current Office Balance", 
+            "Views" : "My Proclaim Accounts Nominal Analytics",
+            "Drilldown" : [],
+            "Template" : "Metrics (Number)",
+            "Group By" : [],
+            "Filter By" : ["cNominal = 9220"],
+            "Calculate By" : ["SUM - Office Balance"]
+        },
+        {
+            "Name": "Current Client Balance", 
+            "Views" : "My Proclaim Accounts Nominal Analytics",
+            "Drilldown" : [],
+            "Template" : "Metrics (Number)",
+            "Group By" : [],
+            "Filter By" : ["cNominal = 9230"],
+            "Calculate By" : ["SUM - Client Balance"]
+        },
+        {
+            "Name": "Cost Received Info", 
+            "Views" : "My Proclaim Accounts Bill Detail Analytics",
+            "Drilldown" : [],
+            "Template" : "Table",
+            "Group By" : ["Matter Number", "Description", "Narrative", "Fee Earner", "Transaction Type", "Sub Type"],
+            "Filter By" : [],
+            "Calculate By" : ["SUM - Amount"]
+        },
+        {
+            "Name": "Aged Bills", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Period"],
+            "Filter By" : [],
+            "Calculate By" : ["Outstanding Ledger(SUM - Outstanding Disbursement ADD SUM - Outstanding Fees)"]
+        },
+        {
+            "Name": "Top 10 Clients by Fees Billed", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Client Name"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        },
+        {
+            "Name": "Top 10 Matters by Fees Billed", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Matter Code"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        },
+        {
+            "Name": "Top Fee Earners by Fees Billed", 
+            "Views" : "My Proclaim Accounts Analytics",
+            "Drilldown" : [],
+            "Template" : "Chart (Bar)",
+            "Group By" : ["Fee Earner"],
+            "Filter By" : [],
+            "Calculate By" : ["Total Fees Billed(SUM - Fees Nett Billed ADD SUM - Fees VAT Billed)"]
+        }
+    ], 
+    "Filters": 
+        ["Client Name", 
+        "Department",
+        "File Closed Date",
+        "File Opened Date",
+        "Fee Earner",
+        "Matter Code",
+        "Matter Type",
+        "Month/Year",
+        "Period",
+        "Sub Type",
+        "Type",
+        "Work Type",
+        "Date Paid"
+        ]
+}

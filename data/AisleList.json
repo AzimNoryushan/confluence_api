@@ -1,0 +1,117 @@
+{
+    "AlertRecipientRecId": 8500,
+    "AlertRecipientType": "user",
+    "BadDataAction": "skipcell",
+    "BatchSize": null,
+    "CacheAttemptCount": 0,
+    "CacheDateTime": null,
+    "CacheMode": "disabled",
+    "CachePriority": "normal",
+    "ColumnsCount": 5,
+    "CreatedBy": "Simple Editor",
+    "CreatedDate": "2021-12-02T15:17:39.9338209Z",
+    "CurrentSize": 200000,
+    "CurrentVersion": 69,
+    "DataConnectionCode": "webservice",
+    "DataConnectionIsBroker": false,
+    "DataConnectionName": "API-Internal",
+    "DataConnectionRecId": 1477,
+    "DataMergeJoinsCount": 0,
+    "Description": "466266f6-1e39-4304-b516-663209af7743",
+    "FileExtension": null,
+    "FileName": null,
+    "FilePath": null,
+    "FileType": "json",
+    "FolderSecurityCascaded": true,
+    "HasAccessToConnectionProperties": true,
+    "HasUpdateKeys": true,
+    "HistoryCountLimit": 5,
+    "IsAlertEnabled": false,
+    "IsAlertFailureEnabled": false,
+    "IsAlertSuccessEnabled": false,
+    "IsDataLoader": false,
+    "IsHistoryEnabled": false,
+    "IsProcessed": true,
+    "LastDataUpdate": "2022-05-18T09:25:21.4143104Z",
+    "LastProcessStatus": "ready",
+    "Name": "AisleList-Data",
+    "OwnerRecId": 8500,
+    "PreventEditSourceProperties": false,
+    "RowCount": 447,
+    "SchemaUpdatedDate": "2021-12-02T15:17:41.3820475Z",
+    "SourceDataUpdate": null,
+    "SourceName": null,
+    "SourceProperties": {
+        "BadDataAction": "skipcell",
+        "FileType": "json",
+        "Schema": {
+            "Columns": [{
+                    "DisplayName": "ZoneId",
+                    "Index": 0,
+                    "InternalType": "int64",
+                    "SourceName": "ZoneId"
+                }, {
+                    "DisplayName": "Name",
+                    "Index": 0,
+                    "InternalType": "textsimple(250)",
+                    "SourceName": "Name"
+                }, {
+                    "DisplayName": "ID",
+                    "Index": 0,
+                    "InternalType": "int64",
+                    "IsUniqueKey": true,
+                    "SourceName": "ID"
+                }, {
+                    "DisplayName": "LastUpdated",
+                    "Index": 0,
+                    "InternalType": "datetime",
+                    "SourceName": "LastUpdated"
+                }, {
+                    "DisplayName": "LastUpdatedByUser",
+                    "Index": 0,
+                    "InternalType": "textsimple(250)",
+                    "SourceName": "LastUpdatedByUser"
+                }
+            ]
+        },
+        "ViewType": null,
+        "WebService": {
+            "CopyParentFields": false,
+            "Root": [],
+            "StringifySubstructures": true,
+            "CallsPerHour": 1000,
+            "CallsPerMinute": 100,
+            "CallsPerSecond": 5,
+            "Headers": [{
+                    "Key": "Accept-Encoding",
+                    "Value": "gzip, deflate"
+                }
+            ],
+            "Method": "GET",
+            "NextPageField": "next_page",
+            "NextPageHeader": "NextPageToken",
+            "NextPageTokenIn": "url",
+            "NextPageTokenInWithName": "token",
+            "PageParameter1IncrementBy": 1,
+            "PageParameter1InitialValue": 1,
+            "PageParameter1Name": "pageNo",
+            "PageParameter2IncrementBy": 0,
+            "PageParameter2InitialValue": 0,
+            "PageParameter2Name": "pagesize",
+            "PageParameterPlacement": "url",
+            "PagingByReferenceSource": "urlinresponse",
+            "PagingMode": "incremental",
+            "Parameters": "lastDataRefresh={{If(If(DataInfo('AisleList-Data', 'RowCount')>0,DataRefreshMode(),'ForceFullReload')='updateappend',FormatDateTime(IfEmptyOrNull(DataInfo('AisleList-Data', 'LastDataRefresh'),DateAdd(now(),-100,'Year')),'yyyy-MM-ddTHH:mm:ss.sssZ'),FormatDateTime(DateAdd(now(),-100,'Year'),'yyyy-MM-ddTHH:mm:ss.sssZ'))}}\n",
+            "Path": "api\/v1\/Warehouse\/GetAisleList",
+            "StopPagingOnHttpStatusCode": 400,
+            "Type": "REST",
+            "UsePageParameter2": false
+        }
+    },
+    "SourceRecId": null,
+    "SubTables": [],
+    "Tags": null,
+    "ViewType": null,
+    "WorkerTaskStatus": null,
+    "WorkerTaskSubType": null
+}
