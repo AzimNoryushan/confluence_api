@@ -1,18 +1,2 @@
-Dashboard Info Service (DONE)
-- Create an API to return these fields with values as JSON
-  a.	Dashboards
-    i.	Dashboard Name e.g Access EzBuild - Dashboard Summary
-    ii.	Name of insights on the dashboard e.g Clients - Aged Creditors...
-    iii.	Filters made available on the dashboard, and their default values e.g Batch GL Date...
-  b.	Insights
-    i.	Insight Name e.g Clients - Aged Creditors...
-    ii.	Name of views used e.g Access EzBuild - Clients Transactions
-    iii.	Template used e.g Stacked column chart
-    iv.	Fields used e.g ClientName
-    v.	Filter equations e.g ClientId != filter value
-    vi.	Calculated fields equations e.g SUM - Days30
-
-
 Update Confluence Service
-- Create an API to update confluence pages with the dashboard info + html templates (DONE)
 - Check out on how to create/update with page tree included (IN PROGRESS)
