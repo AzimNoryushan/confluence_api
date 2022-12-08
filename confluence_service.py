@@ -76,7 +76,7 @@ def update_dashboard(space = None, sub_space = None, project = None, parent = No
                             space=space, 
                             title=title
                         )
-                        confluence.update_page(page_id=page_id, sub_space_id=sub_space_id, parent_id=parent_id, title=title, body=body)
+                        confluence.update_page(page_id=page_id, parent_id=parent_id, title=title, body=body)
                         return "Successfully updated dashboard: " + dashboard_name
                     else:
                         confluence.create_page(space=space, parent_id=parent_id, title=title, body=body)
