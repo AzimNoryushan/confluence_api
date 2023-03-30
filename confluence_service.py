@@ -55,7 +55,7 @@ def update_dashboard(space = None, sub_space = None, project = None, parent = No
                 space=space, 
                 title=sub_space
             )
-
+            
             # Check project page exists
             if confluence.page_exists(space=space, title=project):
                 project_id = confluence.get_page_id(
@@ -90,8 +90,8 @@ def update_dashboard(space = None, sub_space = None, project = None, parent = No
 
             else:
                 # Create project page
-                create_parent_page(space=space, title=project)
-
+                create_parent_page(space=space, parent_id=sub_space_id, title=project)
+                
                 project_id = confluence.get_page_id(
                     space=space, 
                     title=project
@@ -114,7 +114,7 @@ def update_dashboard(space = None, sub_space = None, project = None, parent = No
                 title=sub_space
             )
             # Create project page
-            create_parent_page(space=space, title=project)
+            create_parent_page(space=space, parent_id=sub_space_id, title=project)
 
             project_id = confluence.get_page_id(
                 space=space, 
@@ -280,8 +280,8 @@ def update_dataview(space = None, project = None, parent = None, dataview_name =
 #     except requests.exceptions.HTTPError as e:
 #         return e.response.text
 
-def create_parent_page(space=None, title=None):
-    confluence.create_page(space=space, title=title, body='')
+def create_parent_page(space=None, parent_id=None, title=None):
+    confluence.create_page(space=space, parent_id=parent_id, title=title, body='')
 
 def create_child_page(space=None, parent_id=None, title=None, body=None):
     confluence.create_page(space=space, parent_id=parent_id, title=title, body=body)
